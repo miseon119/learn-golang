@@ -110,3 +110,114 @@ func main() {
 }
 ```
 
+## if 
+
+```golang
+package main
+func main() {
+    var isTrue = true
+    
+    if isTrue {
+    	log.Println("isTrue is ", is True)
+    }else {
+    	log.Println("isTrue is ", is True)
+    }
+
+//    else if{
+//    	log.Println("isTrue is ", is True)
+//   }
+}
+
+```
+
+## switch
+
+```golang
+    switch myvar {
+    
+    case "cat":
+       log.Println("cat ")
+    case "dog":
+       log.Println("dog ")
+    case "pig":
+       log.Println("pig ")
+    default:
+       log.Println("nothing ")
+    }
+```
+
+## for loop
+
+```golang
+	for i := 0; i <= 10; i++ {
+	   log.Println("nothing ")
+	}
+```
+
+```golang
+  animals := []string{"dog", "fish", "horse", "cow", "cat"}
+  
+  for i, animals := range animals {
+    log.Println("nothing ")
+  }
+  
+    for _, animals := range animals {
+    log.Println("nothing ")
+  }
+
+```
+
+for loop a Map
+```golang
+    animals := make(map[string][string])
+    animals["dog"] = "Fido"
+    animals["cat"] = "Fluffy"
+    
+    for _, animals := range animals {
+        log.Println("nothing ")
+    }
+```
+
+## interface
+
+```golang
+type Animal interface {
+    Says() string
+    NumberOfLegs() int
+}
+type Dog struct {
+    Name string
+    Breed string
+}
+type Gorilla struct {
+    Name string
+    Color string
+    NumberOfTeeth int
+}
+
+func main() {
+    dog := Dog {
+    Name: "Samson"
+    Breed: "German Shephered"
+    }
+    PrintInfo(&dog)
+}
+
+func PrintInfo(a Animal){
+    fmt.Println("This animal says ", a.Says(), "and has ", a.NumberOfLegs(), " legs")
+}
+
+func (d *Dog) Says() string {
+    return "Woof"
+}
+func (d *Dog) NumberOfLegs() int {
+    return 4
+}
+func (d *Gorilla) Says() string {
+    return "Ugh"
+}
+func (d *Gorilla) NumberOfLegs() int {
+    return 2
+}
+```
+
