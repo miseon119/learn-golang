@@ -24,3 +24,24 @@ func ChangeUsingPointer(s *string) {
 	*s = newVaule
 }
 ```
+
+## Type
+
+```golang
+package main
+import ("time")
+
+type User struct {
+    FirstName string
+    LastName string
+    PhoneNumber string
+    Age int
+    BirthDate time.time
+}
+func main() {
+    user := User {
+        FirstName: "Bob",
+	LastName: "James",
+    }
+}
+```
